@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "VROKeyChain.h"
+#define SERVICE_NAME @"ANY_NAME_FOR_YOU"
+#define GROUP_NAME @"YOUR_APP_ID.com.apps.shared" //GROUP NAME should start with application identifier.
+@interface AppDelegate (){
+    VROKeyChain * keychain;
+}
 
 @end
 
@@ -17,9 +21,56 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    keychain =[[VROKeyChain alloc] initWithService:SERVICE_NAME withGroup:nil];
     return YES;
 }
+//////////////////* KEYCHAIN METHODS*/////////////////
 
+-(void)insertIntoKeyChain{
+    NSString *key =@"YOUR_KEY";
+    NSData * value = [@"YOUR_DATA" dataUsingEncoding:NSUTF8StringEncoding];
+    
+    if([keychain insert:key :value])
+    {
+        NSLog(@"Successfully added data");
+    }
+    else
+        NSLog(@"Failed to  add data");
+}
+-(void)updateKeyChain{
+    NSString *key =@"YOUR_KEY";
+    NSData * value = [@"NEW_VALUE" dataUsingEncoding:NSUTF8StringEncoding];
+    
+    if([keychain update:key :value])
+    {
+        NSLog(@"Successfully updated data");
+    }
+    else
+        NSLog(@"Failed to  add data");
+}
+-(void)removeFromKeyChain{
+    NSString *key =@"YOUR_KEY";
+    if([keychain remove:key])
+    {
+        NSLog(@"Successfully removed data");
+    }
+    else
+    {
+        NSLog(@"Unable to remove data");
+    }
+}
+-(void)findFromKeychain{
+    NSString *key= @"YOUR_KEY";
+    NSData * data =[keychain find:key];
+    if(data == nil)
+    {
+        NSLog(@"Keychain data not found");
+    }
+    else
+    {
+        NSLog(@"Data is =%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    }
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
