@@ -17,57 +17,54 @@ Copy the VROKeyChain.h & VROKeyChain.m file  to Your Bundle
 ##Usage
 
 Example 
-
-```
-//////////////////* KEYCHAIN METHODS*/////////////////
-
+```ruby
 -(void)insertIntoKeyChain{
-NSString *key =@"YOUR_KEY";
-NSData * value = [@"YOUR_DATA" dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *key =@"YOUR_KEY";
+    NSData * value = [@"YOUR_DATA" dataUsingEncoding:NSUTF8StringEncoding];
 
-if([keychain insert:key :value])
-{
-NSLog(@"Successfully added data");
-}
-else
-NSLog(@"Failed to  add data");
-}
+    if([keychain insert:key :value])
+    {
+        NSLog(@"Successfully added data");
+    }
+    else
+        NSLog(@"Failed to  add data");
+}   
 -(void)updateKeyChain{
-NSString *key =@"YOUR_KEY";
-NSData * value = [@"NEW_VALUE" dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *key =@"YOUR_KEY";
+    NSData * value = [@"NEW_VALUE" dataUsingEncoding:NSUTF8StringEncoding];
 
-if([keychain update:key :value])
-{
-NSLog(@"Successfully updated data");
-}
-else
-NSLog(@"Failed to  add data");
+    if([keychain update:key :value])
+    {
+        NSLog(@"Successfully updated data");
+    }
+    else
+    NSLog(@"Failed to  add data");
 }
 -(void)removeFromKeyChain{
-NSString *key =@"YOUR_KEY";
-if([keychain remove:key])
-{
-NSLog(@"Successfully removed data");
-}
-else
-{
-NSLog(@"Unable to remove data");
-}
+    NSString *key =@"YOUR_KEY";
+    if([keychain remove:key])
+    {
+        NSLog(@"Successfully removed data");
+    }
+    else
+    {
+        NSLog(@"Unable to remove data");
+    }
 }
 -(void)findFromKeychain{
-NSString *key= @"YOUR_KEY";
-NSData * data =[keychain find:key];
-if(data == nil)
-{
-NSLog(@"Keychain data not found");
+    NSString *key= @"YOUR_KEY";
+    NSData * data =[keychain find:key];
+    if(data == nil)
+    {
+        NSLog(@"Keychain data not found");
+    }
+    else
+    {
+        NSLog(@"Data is =%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    }
 }
-else
-{
-NSLog(@"Data is =%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-}
-}
-```
 
+```
 
 ## Author
 
