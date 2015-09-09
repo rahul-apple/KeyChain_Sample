@@ -17,6 +17,7 @@
 		BE88EFE51BA037700027DCAD /* VROKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BE88EFE41BA037700027DCAD /* VROKeyChain.m */; };
 		BE88EFE71BA039EF0027DCAD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BE88EFE61BA039EF0027DCAD /* README.md */; };
 		BE88EFE91BA03A5F0027DCAD /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = BE88EFE81BA03A5F0027DCAD /* Screenshots */; };
+		BE88EFEB1BA03F700027DCAD /* google21fcfe13e976efc1.html in Resources */ = {isa = PBXBuildFile; fileRef = BE88EFEA1BA03F700027DCAD /* google21fcfe13e976efc1.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		BE88EFE41BA037700027DCAD /* VROKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VROKeyChain.m; sourceTree = "<group>"; };
 		BE88EFE61BA039EF0027DCAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE88EFE81BA03A5F0027DCAD /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
+		BE88EFEA1BA03F700027DCAD /* google21fcfe13e976efc1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = google21fcfe13e976efc1.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		BE88EFAF1BA0371E0027DCAD = {
 			isa = PBXGroup;
 			children = (
+				BE88EFEA1BA03F700027DCAD /* google21fcfe13e976efc1.html */,
 				BE88EFE61BA039EF0027DCAD /* README.md */,
 				BE88EFE81BA03A5F0027DCAD /* Screenshots */,
 				BE88EFBA1BA0371E0027DCAD /* KeyChain_Sample */,
@@ -228,6 +231,7 @@
 			files = (
 				BE88EFE91BA03A5F0027DCAD /* Screenshots in Resources */,
 				BE88EFC71BA0371E0027DCAD /* Main.storyboard in Resources */,
+				BE88EFEB1BA03F700027DCAD /* google21fcfe13e976efc1.html in Resources */,
 				BE88EFCC1BA0371E0027DCAD /* LaunchScreen.xib in Resources */,
 				BE88EFC91BA0371E0027DCAD /* Images.xcassets in Resources */,
 			);
