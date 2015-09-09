@@ -14,6 +14,9 @@
 		BE88EFC91BA0371E0027DCAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE88EFC81BA0371E0027DCAD /* Images.xcassets */; };
 		BE88EFCC1BA0371E0027DCAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE88EFCA1BA0371E0027DCAD /* LaunchScreen.xib */; };
 		BE88EFD81BA0371E0027DCAD /* KeyChain_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE88EFD71BA0371E0027DCAD /* KeyChain_SampleTests.m */; };
+		BE88EFE51BA037700027DCAD /* VROKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = BE88EFE41BA037700027DCAD /* VROKeyChain.m */; };
+		BE88EFE71BA039EF0027DCAD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BE88EFE61BA039EF0027DCAD /* README.md */; };
+		BE88EFE91BA03A5F0027DCAD /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = BE88EFE81BA03A5F0027DCAD /* Screenshots */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		BE88EFD11BA0371E0027DCAD /* KeyChain_SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyChain_SampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE88EFD61BA0371E0027DCAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE88EFD71BA0371E0027DCAD /* KeyChain_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyChain_SampleTests.m; sourceTree = "<group>"; };
+		BE88EFE11BA037320027DCAD /* KeyChain_Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KeyChain_Sample.entitlements; sourceTree = "<group>"; };
+		BE88EFE31BA037700027DCAD /* VROKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VROKeyChain.h; sourceTree = "<group>"; };
+		BE88EFE41BA037700027DCAD /* VROKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VROKeyChain.m; sourceTree = "<group>"; };
+		BE88EFE61BA039EF0027DCAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BE88EFE81BA03A5F0027DCAD /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,8 @@
 		BE88EFAF1BA0371E0027DCAD = {
 			isa = PBXGroup;
 			children = (
+				BE88EFE61BA039EF0027DCAD /* README.md */,
+				BE88EFE81BA03A5F0027DCAD /* Screenshots */,
 				BE88EFBA1BA0371E0027DCAD /* KeyChain_Sample */,
 				BE88EFD41BA0371E0027DCAD /* KeyChain_SampleTests */,
 				BE88EFB91BA0371E0027DCAD /* Products */,
@@ -81,6 +91,8 @@
 		BE88EFBA1BA0371E0027DCAD /* KeyChain_Sample */ = {
 			isa = PBXGroup;
 			children = (
+				BE88EFE21BA037520027DCAD /* Classes */,
+				BE88EFE11BA037320027DCAD /* KeyChain_Sample.entitlements */,
 				BE88EFBF1BA0371E0027DCAD /* AppDelegate.h */,
 				BE88EFC01BA0371E0027DCAD /* AppDelegate.m */,
 				BE88EFC21BA0371E0027DCAD /* ViewController.h */,
@@ -117,6 +129,15 @@
 				BE88EFD61BA0371E0027DCAD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE88EFE21BA037520027DCAD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE88EFE31BA037700027DCAD /* VROKeyChain.h */,
+				BE88EFE41BA037700027DCAD /* VROKeyChain.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +189,12 @@
 				TargetAttributes = {
 					BE88EFB71BA0371E0027DCAD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = WRBW3Z36M6;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					BE88EFD01BA0371E0027DCAD = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE88EFE91BA03A5F0027DCAD /* Screenshots in Resources */,
 				BE88EFC71BA0371E0027DCAD /* Main.storyboard in Resources */,
 				BE88EFCC1BA0371E0027DCAD /* LaunchScreen.xib in Resources */,
 				BE88EFC91BA0371E0027DCAD /* Images.xcassets in Resources */,
@@ -221,7 +249,9 @@
 			files = (
 				BE88EFC41BA0371E0027DCAD /* ViewController.m in Sources */,
 				BE88EFC11BA0371E0027DCAD /* AppDelegate.m in Sources */,
+				BE88EFE71BA039EF0027DCAD /* README.md in Sources */,
 				BE88EFBE1BA0371E0027DCAD /* main.m in Sources */,
+				BE88EFE51BA037700027DCAD /* VROKeyChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +377,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyChain_Sample/KeyChain_Sample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KeyChain_Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,9 +391,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeyChain_Sample/KeyChain_Sample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KeyChain_Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
